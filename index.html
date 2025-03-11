@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Строительные чертежи</title>
+    <!-- Подключение Telegram Web App SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Заголовок -->
+        <h1>Архив чертежей</h1>
+
+        <!-- Кнопка "Открыть последний чертёж" -->
+        <button class="main-btn" id="last-blueprint">📂 Открыть последний чертёж</button>
+
+        <!-- Секция списка объектов -->
+        <div class="section">
+            <button class="section-btn" id="active-projects">🏗️ Действующие объекты</button>
+            <button class="section-btn" id="completed-projects">✅ Завершённые объекты</button>
+            <button class="section-btn" id="abandoned-projects">🚧 Заброшенные объекты</button>
+        </div>
+
+        <!-- Админ-панель (пока видна всем, позже добавим проверку прав) -->
+        <div class="admin-section">
+            <button class="admin-btn" id="admin-panel">⚙️ Админ</button>
+            <button class="admin-btn" id="users-list">👥 Пользователи</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
