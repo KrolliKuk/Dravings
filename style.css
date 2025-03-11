@@ -164,3 +164,89 @@ h1 {
 .admin-feature-btn:hover {
   background: #f8f8f8;
 }
+/* Стили для списка пользователей */
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin: 8px 0;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.user-actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.make-admin-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+.ban-user-btn {
+  background: #ff4444;
+  color: white;
+}
+/* Стили для редактора */
+.folder-item {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.folder-name {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.delete-folder {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ff4444;
+}
+
+.edit-section-btn {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.file-actions select {
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+.btn-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.file-subtext {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
