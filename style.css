@@ -1,4 +1,3 @@
-/* Сброс стандартных отступов и шрифтов */
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +22,6 @@ h1 {
     font-size: 24px;
 }
 
-/* Стили для основных кнопок */
 .main-btn {
     width: 100%;
     padding: 15px;
@@ -36,11 +34,18 @@ h1 {
     transition: background 0.3s;
 }
 
-.main-btn:hover {
-    background: #f0f0f0;
+.btn-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-/* Стили для кнопок разделов */
+.file-subtext {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+}
+
 .section-btn {
     width: 100%;
     padding: 12px;
@@ -54,11 +59,6 @@ h1 {
     transition: background 0.3s;
 }
 
-.section-btn:hover {
-    background: #f8f8f8;
-}
-
-/* Стили для админ-кнопок */
 .admin-section {
     margin-top: 20px;
     border-top: 1px solid #eee;
@@ -75,178 +75,63 @@ h1 {
     color: #666;
     font-size: 14px;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
-.admin-btn:hover {
-    background: #f0f0f0;
-}
-/* Модальное окно */
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
 }
 
 .modal-header {
-  background: #fff;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #eee;
-}
-
-.modal-header h2 {
-  font-size: 18px;
-  color: #333;
-}
-
-.close-btn {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #666;
+    background: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
 }
 
 .modal-content {
-  background: #fff;
-  flex-grow: 1;
-  padding: 15px;
-  overflow-y: auto;
-}
-
-/* Элементы проектов и файлов */
-.project-btn {
-  width: 100%;
-  padding: 12px;
-  margin: 6px 0;
-  background: #f8f8f8;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  text-align: left;
-  cursor: pointer;
+    background: #fff;
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
 }
 
 .file-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  margin: 8px 0;
-  background: #f8f8f8;
-  border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 8px 0;
+    background: #f8f8f8;
+    border-radius: 6px;
 }
 
-.file-date {
-  color: #666;
-  font-size: 12px;
-}
-.admin-feature-btn {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  text-align: left;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.admin-feature-btn:hover {
-  background: #f8f8f8;
-}
-/* Стили для списка пользователей */
 .user-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px;
-  margin: 8px 0;
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    margin: 8px 0;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
 }
 
-.user-info {
-  flex: 1;
-}
-
-.user-actions {
-  display: flex;
-  gap: 8px;
-}
-
-.user-actions button {
-  padding: 6px 12px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 12px;
-}
-
-.make-admin-btn {
-  background: #4CAF50;
-  color: white;
-}
-
-.ban-user-btn {
-  background: #ff4444;
-  color: white;
-}
-/* Стили для редактора */
-.folder-item {
-  display: flex;
-  gap: 10px;
-  margin: 10px 0;
-  align-items: center;
-}
-
-.folder-name {
-  flex: 1;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-}
-
-.delete-folder {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #ff4444;
-}
-
-.edit-section-btn {
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  background: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 8px;
-}
-
-.file-actions select {
-  padding: 4px;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-}
-.btn-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.file-subtext {
-  font-size: 12px;
-  color: #666;
-  margin-top: 4px;
+.admin-feature-btn {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
 }
