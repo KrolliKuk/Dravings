@@ -18,10 +18,10 @@ let projects = JSON.parse(localStorage.getItem("projects")) || {
 };
 
 // Текущий пользователь (431218382)
-let currentUser = {
-  id: tg.initDataUnsafe.user?.id || 0,
-  isAdmin: tg.initDataUnsafe.user?.id === 431218382 // 
-};
+const mainAdminId = 431218382; // Замените на ваш ID
+currentUser.isAdmin = users.some(u => 
+  u.id === currentUser.id && (u.isAdmin || u.id === mainAdminId)
+);
 
 // Элементы интерфейса
 const elements = {
@@ -407,9 +407,28 @@ adminContent.innerHTML += `
   <button class="admin-feature-btn" id="edit-completed">✏️ Завершённые</button>
   <button class="admin-feature-btn" id="edit-abandoned">✏️ Заброшенные</button>
 `;
+document.getElementById("admin-panel").addEventListener("click", () => {
+  // Обновляем статус перед проверкой
+  currentUser.isAdmin = users.some(u => 
+    u.id === currentUser.id && u.isAdmin
+  );
+  
+  if (!currentUser.isAdmin) {
+    tg.showAlert("🚫 У вас нет прав администратора");
+    return;
+  }
+  
+  // Остальная логика админ-панели...
+});
 
 // Обработчики для новых кнопок
 document.getElementById("manage-all-files").addEventListener("click", showAllFiles);
 document.getElementById("edit-active").addEventListener("click", () => showTabEditor("active"));
 document.getElementById("edit-completed").addEventListener("click", () => showTabEditor("completed"));
 document.getElementById("edit-abandoned").addEventListener("click", () => showTabEditor("abandoned"));
+
+console.log("Текущий пользователь:", {
+  id: currentUser.id,
+  isAdmin: currentUser.isAdmin,
+  users: users
+});
